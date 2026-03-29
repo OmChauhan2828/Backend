@@ -8,7 +8,12 @@ app.listen(port,() => {
     console.log(`app is listening on port ${port}`);
 });
 
-app.use(req ,res) => {
-    console.log("request received");
-    res.send("this is a basic response");
-});
+// app.use((req, res) => {
+//     console.log("request received");
+//     res.send("this is a basic response");
+// });
+
+// routing
+app.get('/', (req, res) => {
+    res.send("you contacted root path");
+});    
