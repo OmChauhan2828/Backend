@@ -14,6 +14,7 @@ app.listen(port,() => {
 // });
 
 // routing
-app.get('/', (req, res) => {
+app.get('/:username', (req, res) => {
+    console.log(req.params);
     res.send("you contacted root path");
 });    
